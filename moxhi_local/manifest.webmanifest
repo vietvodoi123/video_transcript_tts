@@ -1,0 +1,17 @@
+{
+  "name": "Mặc Hi — dịch truyện Trung → Việt",
+  "short_name": "Mặc Hi",
+  "description": "Dịch truyện Trung → Việt ngay trên máy bằng WebGPU — không gửi văn bản đi đâu, dùng được offline sau lần tải model đầu tiên.",
+  "lang": "vi",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f4eee3",
+  "theme_color": "#b3372f",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Bảng tốc độ dịch Mặc Hi trên các GPU — benchmark ẩn danh do cộng đồng gửi lên, không kèm nội dung văn bản." />
+    <link rel="canonical" href="https://moxhi.vietphrase.app/board" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://moxhi.vietphrase.app/board" />
+    <meta property="og:site_name" content="Mặc Hi" />
+    <meta property="og:locale" content="vi_VN" />
+    <meta property="og:title" content="Mặc Hi 墨曦 · Bảng tốc độ" />
+    <meta property="og:description" content="Tốc độ dịch thực tế do cộng đồng Mặc Hi đo và gửi lên — ẩn danh, không kèm nội dung văn bản." />
+    <meta property="og:image" content="https://moxhi.vietphrase.app/og.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Mặc Hi 墨曦 · Bảng tốc độ" />
+    <meta name="twitter:description" content="Benchmark tốc độ dịch Mặc Hi do cộng đồng gửi lên, không kèm nội dung văn bản." />
+    <meta name="twitter:image" content="https://moxhi.vietphrase.app/og.jpg" />
+    <title>Mặc Hi 墨曦 · Bảng tốc độ</title>
+    <meta name="theme-color" content="#b3372f" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23b3372f'/%3E%3Ctext x='32' y='30' font-size='26' text-anchor='middle' fill='%23f4eee3' font-family='serif'%3E墨%3C/text%3E%3Ctext x='32' y='56' font-size='26' text-anchor='middle' fill='%23f4eee3' font-family='serif'%3E曦%3C/text%3E%3C/svg%3E" />
+    <script type="module" crossorigin src="/assets/board-ABSIjSVc.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/modulepreload-polyfill-B5Qt9EMX.js">
+    <link rel="modulepreload" crossorigin href="/assets/pseudonym-DeqB8BRK.js">
+    <link rel="modulepreload" crossorigin href="/assets/models-CvHl_Lx7.js">
+    <link rel="stylesheet" crossorigin href="/assets/board-DFM1bO4t.css">
+  </head>
+  <body>
+    <div class="mist mist-a" aria-hidden="true"></div>
+    <div class="mist mist-b" aria-hidden="true"></div>
+    <!-- Linh mạch lề (D): kinh mạch mực dọc hai mép viewport, chỉ ≥1200px.
+         Xung linh khí (.pulse) là span HTML chạy translateY — cùng cơ chế
+         vô-hình-mặc-định với .qi. -->
+    <div class="vein vein-l" aria-hidden="true">
+      <svg viewBox="0 0 58 1400" preserveAspectRatio="xMidYMin slice">
+        <g class="vein-lines">
+          <path d="M29,0 V1400"/><path d="M29,180 h12"/><path d="M29,470 h-9"/>
+          <path d="M29,760 h12"/><path d="M29,1050 h-9"/>
+        </g>
+        <g class="vein-nodes">
+          <circle cx="29" cy="180" r="2.6"/><circle cx="29" cy="470" r="2.6"/>
+          <circle cx="29" cy="760" r="2.6"/><circle cx="29" cy="1050" r="2.6"/>
+        </g>
+      </svg>
+      <span class="pulse"></span>
+      <span class="pulse pulse-b"></span>
+      <span class="pulse pulse-up"></span>
+    </div>
+    <div class="vein vein-r" aria-hidden="true">
+      <svg viewBox="0 0 58 1400" preserveAspectRatio="xMidYMin slice">
+        <g class="vein-lines">
+          <path d="M29,0 V1400"/><path d="M29,300 h-12"/><path d="M29,590 h9"/>
+          <path d="M29,880 h-12"/><path d="M29,1170 h9"/>
+        </g>
+        <g class="vein-nodes">
+          <circle cx="29" cy="300" r="2.6"/><circle cx="29" cy="590" r="2.6"/>
+          <circle cx="29" cy="880" r="2.6"/><circle cx="29" cy="1170" r="2.6"/>
+        </g>
+      </svg>
+      <span class="pulse"></span>
+      <span class="pulse pulse-b"></span>
+      <span class="pulse pulse-up"></span>
+    </div>
+    <div class="page">
+      <!-- Masthead kiểu măng-sét báo giấy (N6): ấn triện làm huy hiệu, tên bảng
+           đặt giữa, hai đường kẻ đôi khép măng-sét — trang là một "số báo"
+           benchmark của cộng đồng. -->
+      <header class="mast">
+        <!-- Cánh mạch trận văn (A′): ấn triện làm "die", mạch + trận văn tỏa hai
+             bên măng-sét như hoa văn chìm. Chấm linh khí (.qi) mặc định vô hình,
+             CSS offset-path đưa chạy dọc mạch về ấn — reduced-motion tắt qua
+             animation:none, còn trình duyệt thiếu offset-path thì @supports
+             chặn không gán animation, nên cả hai trường hợp đều không bao giờ
+             hiện. Hình học né mọi vùng chữ: chỉ chiếm dải y 0–90 quanh ấn. -->
+        <svg class="wings" viewBox="0 0 620 120" aria-hidden="true">
+          <defs>
+            <linearGradient id="ring-fade-g" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#fff"/>
+              <stop offset="0.7" stop-color="#fff"/>
+              <stop offset="0.97" stop-color="#fff" stop-opacity="0"/>
+            </linearGradient>
+            <mask id="ring-fade" maskUnits="userSpaceOnUse" x="248" y="0" width="124" height="118">
+              <rect x="248" y="0" width="124" height="118" fill="url(#ring-fade-g)"/>
+            </mask>
+          </defs>
+          <!-- vòng trận pháp quanh ấn: 2 vòng nét đứt quay ngược chiều +
+               4 trận văn thoi + 8 vạch chia; mask fade chân vòng để phần
+               dưới tan dần trước khi chạm tiêu đề -->
+          <g class="ring" mask="url(#ring-fade)">
+            <g class="ring-outer">
+              <circle class="ring-dash" cx="310" cy="58" r="52"/>
+              <path class="ring-rune" d="M310,2 l4,4 -4,4 -4,-4 z"/>
+              <path class="ring-rune" d="M310,2 l4,4 -4,4 -4,-4 z" transform="rotate(90 310 58)"/>
+              <path class="ring-rune" d="M310,2 l4,4 -4,4 -4,-4 z" transform="rotate(180 310 58)"/>
+              <path class="ring-rune" d="M310,2 l4,4 -4,4 -4,-4 z" transform="rotate(270 310 58)"/>
+            </g>
+            <g class="ring-inner">
+              <circle class="ring-dash2" cx="310" cy="58" r="44"/>
+              <g class="ring-ticks">
+                <path d="M310,11 v6"/>
+                <path d="M310,11 v6" transform="rotate(45 310 58)"/>
+                <path d="M310,11 v6" transform="rotate(90 310 58)"/>
+                <path d="M310,11 v6" transform="rotate(135 310 58)"/>
+                <path d="M310,11 v6" transform="rotate(180 310 58)"/>
+                <path d="M310,11 v6" transform="rotate(225 310 58)"/>
+                <path d="M310,11 v6" transform="rotate(270 310 58)"/>
+                <path d="M310,11 v6" transform="rotate(315 310 58)"/>
+              </g>
+            </g>
+          </g>
+          <g class="wing-lines">
+            <path d="M282,50 H236 L214,32 H120"/>
+            <path d="M282,64 H222 L198,84 H92"/>
+            <path d="M240,50 V38"/>
+            <path d="M160,32 V46 H128"/>
+            <path d="M338,50 H384 L406,32 H500"/>
+            <path d="M338,64 H398 L422,84 H528"/>
+            <path d="M380,50 V38"/>
+            <path d="M460,32 V46 H492"/>
+          </g>
+          <g class="wing-pads">
+            <circle cx="120" cy="32" r="2.6"/><circle cx="92" cy="84" r="2.6"/>
+            <circle cx="128" cy="46" r="2.2"/><circle cx="240" cy="38" r="2.2"/>
+            <circle cx="500" cy="32" r="2.6"/><circle cx="528" cy="84" r="2.6"/>
+            <circle cx="492" cy="46" r="2.2"/><circle cx="380" cy="38" r="2.2"/>
+          </g>
+          <g class="wing-runes">
+            <path d="M310,2 l4,4 -4,4 -4,-4 z"/>
+            <path d="M186,32 l3.5,3.5 -3.5,3.5 -3.5,-3.5 z"/>
+            <path d="M434,32 l3.5,3.5 -3.5,3.5 -3.5,-3.5 z"/>
+          </g>
+          <g class="qi qi-l"><circle class="qi-halo" r="4"/><circle class="qi-core" r="1.9"/></g>
+          <g class="qi qi-l2"><circle class="qi-halo" r="4"/><circle class="qi-core" r="1.9"/></g>
+          <g class="qi qi-l3"><circle class="qi-halo" r="4"/><circle class="qi-core" r="1.9"/></g>
+          <g class="qi qi-r"><circle class="qi-halo" r="4"/><circle class="qi-core" r="1.9"/></g>
+          <g class="qi qi-r2"><circle class="qi-halo" r="4"/><circle class="qi-core" r="1.9"/></g>
+          <g class="qi qi-r3"><circle class="qi-halo" r="4"/><circle class="qi-core" r="1.9"/></g>
+        </svg>
+        <p class="mast-line"><a href="/">Mặc Hi 墨曦</a> · <span>benchmark cộng đồng</span> · <span>ẩn danh</span></p>
+        <a class="sealink" href="/" aria-label="Về trang dịch Mặc Hi">
+          <svg class="seal" viewBox="0 0 64 64" role="img" aria-label="Ấn 墨曦">
+            <rect x="1.5" y="1.5" width="61" height="61" rx="7" fill="var(--seal)"/>
+            <rect x="5" y="5" width="54" height="54" rx="4" fill="none" stroke="rgba(244,238,227,.55)" stroke-width="1.5"/>
+            <text x="32" y="29" font-size="23" text-anchor="middle" fill="var(--paper)">墨</text>
+            <text x="32" y="55" font-size="23" text-anchor="middle" fill="var(--paper)">曦</text>
+          </svg>
+        </a>
+        <h1 class="mast-name">Bảng tốc độ</h1>
+        <p class="mast-sub">Tốc độ dịch thực tế do chính người dùng đo và gửi lên
+          — không kèm nội dung văn bản.</p>
+        <!-- Thanh mực khép măng-sét — cùng chữ ký với brushline trang dịch
+             (src/app/ui.js): nét chính 2.6 mực 55% + nét echo 1 mực 25%; path
+             nối thêm nhịp T để giữ bước sóng ở khổ 1100 thay vì kéo giãn. -->
+        <svg class="brushline" viewBox="0 0 1100 12" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M2 7 Q120 1 300 6 T 598 5 T 896 6 T 1098 5" fill="none" stroke="var(--ink)" stroke-width="2.6"
+                stroke-linecap="round" opacity="0.55"/>
+          <path d="M8 9 Q160 5 340 8 T 590 8 T 850 8 T 1092 8" fill="none" stroke="var(--ink)" stroke-width="1"
+                stroke-linecap="round" opacity="0.25"/>
+        </svg>
+      </header>
+      <main id="board-main">
+        <!-- Shell tĩnh: vẽ khung + skeleton ngay khi HTML tới, board-main.js
+             thay bằng dữ liệu thật (hoặc trạng thái lỗi) khi /api/board về.
+             Markup phản chiếu loadingHtml() trong board_lib.js. -->
+        <section class="hero-stat skel" aria-hidden="true">
+          <div class="hero-lead">
+            <p class="figure"><b class="fig-num">—</b><span class="fig-unit">tok/giây</span></p>
+            <p class="qualifier">Đang tải số liệu…</p>
+          </div>
+          <div class="substats">
+            <div class="substat"><b>—</b><span>lượt gửi</span></div>
+            <div class="substat"><b>—</b><span>dòng GPU</span></div>
+          </div>
+        </section>
+        <section class="ranking" aria-label="Đang tải bảng xếp hạng">
+          <h2>Bảng xếp hạng</h2>
+          <div class="skeleton">
+            <div class="skel-row"></div>
+            <div class="skel-row"></div>
+            <div class="skel-row"></div>
+            <div class="skel-row"></div>
+            <div class="skel-row"></div>
+          </div>
+        </section>
+        <noscript><p class="state empty">Trang này cần JavaScript để tải bảng xếp hạng.</p></noscript>
+      </main>
+      <!-- Colophon (Ft4) nay nằm trong dải sơn thủy kết trang (ambient fx B):
+           3 lớp núi mực + vầng 曦 + sương trôi + đàn chim mực thi thoảng bay
+           qua; dải núi thay vai trò border-top cũ. Chữ colophon đứng trên dải
+           sương sáng nhất. -->
+      <footer class="boardfoot">
+        <!-- Cảnh vẽ ở khổ 1440×180 (≈1:1 với desktop full-bleed) — ba lớp núi
+             phủ trọn bề ngang như mockup layout-v2; khổ hẹp slice crop hai
+             bên (dawn ẩn trong media ≤680px vì đè chữ). -->
+        <svg class="ridge" viewBox="0 0 1440 180" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+          <defs>
+            <filter id="ridge-mist" x="-40%" y="-40%" width="180%" height="180%">
+              <feGaussianBlur stdDeviation="10"/>
+            </filter>
+          </defs>
+          <circle class="dawn" cx="1180" cy="44" r="15"/>
+          <path class="mtn m1" d="M0,110 Q180,70 360,98 T720,92 T1080,100 T1440,90 L1440,180 L0,180 Z"/>
+          <path class="mtn m2" d="M0,132 Q220,86 420,118 Q600,146 800,112 Q1000,84 1200,116 Q1320,132 1440,118 L1440,180 L0,180 Z"/>
+          <path class="mtn m3" d="M0,156 Q200,122 400,142 Q580,158 760,138 Q950,118 1150,144 Q1300,162 1440,146 L1440,180 L0,180 Z"/>
+          <ellipse class="fog fog-a" cx="380" cy="128" rx="300" ry="18" filter="url(#ridge-mist)"/>
+          <ellipse class="fog fog-b" cx="980" cy="148" rx="280" ry="15" filter="url(#ridge-mist)"/>
+          <ellipse class="fog fog-c" cx="260" cy="158" rx="320" ry="16" filter="url(#ridge-mist)"/>
+          <g class="flock">
+            <g class="bird b-lead">
+              <path class="w-up" d="M-8,0 Q-3.5,-5.5 1,-1 Q5.5,-6.5 11,-1"/>
+              <path class="w-dn" d="M-8,-2 Q-3.5,1 1,-1 Q5.5,0 11,-3"/>
+            </g>
+            <g class="bird b-two" transform="translate(-18,8) scale(.6)">
+              <path class="w-up" d="M-8,0 Q-3.5,-5.5 1,-1 Q5.5,-6.5 11,-1"/>
+              <path class="w-dn" d="M-8,-2 Q-3.5,1 1,-1 Q5.5,0 11,-3"/>
+            </g>
+          </g>
+          <!-- tiên nhân cưỡi hạc — tranh thủy mặc public/hac-tien.svg (user
+               cung cấp, đã crop bỏ núi mây nền bằng viewBox). Nhúng <image>
+               nên style nội bộ của tranh tự đóng gói, không va chạm class;
+               animate cả nhóm bằng transform nên độ phức tạp bên trong
+               không ảnh hưởng hiệu năng. KHÔNG vỗ cánh — lượn sóng + bồng
+               bềnh (crane-bob). -->
+          <g class="rider">
+            <g class="crane-art">
+              <g transform="translate(-50,-38) scale(0.6452) translate(-4,-168.9)"><linearGradient id="hac-SVGID_1_" x1="103.5" x2="102.1" y1="279.8" y2="312.3" gradientUnits="userSpaceOnUse">
+    <stop stop-color="#DADADA" offset="0"/>
+    <stop stop-color="#F5FAFD" offset=".8876"/>
+  </linearGradient>
+  
+  
+  <linearGradient id="hac-SVGID_2_" x1="29.25" x2="29.25" y1="288.5" y2="307.2" gradientUnits="userSpaceOnUse">
+    <stop stop-color="#CBCBCB" offset="0"/>
+    <stop stop-color="#F3F7FB" stop-opacity="0" offset="1"/>
+  </linearGradient>
+  
+  <linearGradient id="hac-SVGID_3_" x1="107" x2="106.3" y1="301" y2="315.7" gradientUnits="userSpaceOnUse">
+    <stop stop-color="#DBDBDA" offset="0"/>
+    <stop stop-color="#FDFEFF" stop-opacity="0" offset="1"/>
+  </linearGradient>
+  
+  
+  
+  
+  
+  
+  <linearGradient id="hac-SVGID_5_" x1="114.9" x2="143.1" y1="231.6" y2="268.1" gradientUnits="userSpaceOnUse">
+    <stop stop-color="#767778" offset="0"/>
+    <stop stop-color="#545656" offset="1"/>
+  </linearGradient>
+  <path d="m128 248.5c4 2.5 9.6 7.6 17.5 10.3 2.7 0.9 6.4 1.6 6.1 2-1 1.1-9.2 3-21.4-6.2l-7.5-8.1 1.1 1 4.2 1zm-4 0.6 5 4.4c3.5 3.4 10.7 8.7 16.8 11.6 3.3 1.6-6.2 3.4-17.7-7.1l-6.6-7.6 2.5-1.3zm-5.8-2.4c5.3 4.1 6.7 3.7 7.7 3.7-0.9-1.5-3.9-4.2-3.9-4.2 1.5 1.3 4.5 2.8 7 2.7l-3.4 14.2-7.1-9.7-0.3-6.7zm0.3 1 6 10.9c2.5 5.2 5.9 10.2 5.9 10.8-1.4 0.6-9.5-3.6-13.3-15.9l-0.1-6.5 1.5 0.7zm-4.9-2 2.4 5.3c1.4 1.9 2-0.2 2-0.2l-1.4-4.3c2.5 3.6 5.6 4.5 6.1 4.4l2.3 8.2-6.9 3.5-4.5-7v-9.9zm-2.8-0.7 2.4 12c0.9 3 1.7 8.5 0.9 8.8-1.9-0.7-6-6.9-6-11.4l0.5-7.9 2.2-1.5z" fill="url(#hac-SVGID_5_)"/>
+  <path d="m112 245.5c0.5 3.5 2.2 4.5 2.5 4.5l-1.3-4.1c1.8 8.6 8.2 23 8.2 23-2-0.4-8.7-5-10.3-17l0.9-6.4z" fill="#585858"/>
+  <path d="m107.9 244.5 1.1 11.1-0.4 6.3c-0.9 0.2-4.6-5.3-2.9-9l2.2-8.4z" fill="#525453"/>
+  <path d="m107.9 244.5c-0.7 3.9 0.1 9.4 0 16.7-2.4-1.7-3.7-6.1-2.5-9.2l2.5-7.5z" fill="#656767"/>
+  <linearGradient id="hac-SVGID_6_" x1="15.48" x2="42.05" y1="183.4" y2="213.7" gradientUnits="userSpaceOnUse">
+    <stop stop-color="#545656" offset="0"/>
+    <stop stop-color="#797A7A" offset="1"/>
+  </linearGradient>
+  <path d="m14.6 189.2 4.4 3.5c5.1 4 16 9.5 25 15.2l-4.6-1.4-5.4-1.8c-7.1-3.6-21.6-13.8-23-15.8 1.1 8 13.6 14.2 20.5 17.1l-20.3-7.4c1.8 5 11 8.6 15.3 9.8l14.5 3-17.4-4.4-7-3c-2-1-5.1-3-5.5-3s1.6 5 15.3 7.5l15.3 3.6c-0.6 0-4.2 1-9.8 0.1-5.2-0.1-15.5-6.2-18.2-6.2 0 1.7 5.8 4.8 14 6.2l10.3 1 8.1 1-2.6-1.6-23.5-0.9c-0.5 0.9 5.9 3.3 11.7 3.7l12.3 0.3 1.6-0.1c-0.6-0.1-2.6 0-8 1.5l-8.6-1.6-5-0.5c0.4 1.9 6.5 3.5 12 3.9l11.4-1.4-3.4 1.5-20-3.5c0.6 1.2 4 3.4 11.7 3.4l11.3-0.9 4.1-1.9-2.7 1.6-19.4 2.3c0.7 1.2 6.9 2.9 12.5 1.7l6.9-2.7-0.5-1.4 3.2-1.4-0.6 5.2-17.3-1.4c-0.5 2.5 6.3 2.4 13.8 1.5l3.9-2.5v-1.9l0.2 4.3-9.1 2.6c-3 0-7.9-1.4-7.9-1.4 0.3 0.3 2.5 1.3 5.6 1.4l-3.8 0.2 4.5 1.2 7.1-3.4 1.7-2.8-0.2 2.5-3 4.3c1.1 0.4 2.9-0.3 4.2-1l1-2.4 1.7-2 1.1 2.6-2.8 2.5-0.2 1.4c1.1 0.3-4.1 3.1-6.6 3.3l-2.3-1.4-2.7-3.6 4.2-0.4 4.9-2.4 4.4-2" fill="url(#hac-SVGID_6_)"/>
+  <path d="m67.2 219.6c-1.7-0.5-5.1-5.6-7.2-8.6-1.1-1.3-3-3-7.6-4.4-7.4-2.4-20.3-6.5-33.4-18.9l-4.3-5.1c-1.6 3.4 4.5 12.8 16.2 19.4-4.9-2.1-14-8-19.7-13.1 0.2 5.3 8.7 11.8 19.3 16.7l10.5 1.3c0.2 1.2 2.6 1.7 4.1 1.2-1.7-0.7-5.6-3.1-6.6-5.2 11 4.8 16.2 4.7 20.9 9.7 2.3 2.4 4.1 5.4 7.5 7.4l0.3-0.4z" fill="#101515"/>
+  <path d="m69.6 214.2c-1.9 5.5-3.1 6.2-7.5 7.7-6.1 1.6-6.4 7.1-1.7 10.7-4.9-4.6-2.4-8 0.2-8.7 3.3-1.4 8-0.7 9-9.7z" fill="#101515"/>
+  <path d="m54.1 254c-3.2 2-5.2 1.4-6.2 3.1-2.2 2.4-11 9.3-14.5 10.9-0.9 0.4-3.9-0.4-4.7 0.9l1.8 0.1c-0.1 0.6-3.5 2-4.8 1.7-1 0-0.5 1.2 1.3 0.8l1.5-0.4c-0.4 0.6-1.5 0.9-3.8 1.1-1.7 0.7-1.5 0.9-0.1 0.9 2.1 0.1 6-0.9 9.6-3.6 10-8.1 16.8-12.3 18.7-13.9 0.6-0.6 1.1-1.2 1.2-1.6z" fill="#101515"/>
+  <path d="m58 255.7c-3.9 1.8-6 1.4-7 3.2-1.3 2-13 11.5-15 12.7-1.6 1-4 0-5.4 1.4l2.4 0.1c0 0.5-4 2.3-4.4 2.3-1-0.2-1.2 0.8 0.1 0.6l2.5-0.8c-0.1 0.5-5.6 2-5.7 2.8 0 0.4 4 0.6 10.4-3.6 1.6-1 10.6-10 19-15.5 2.5-1.8 4.3-2.5 5-3.2-0.4-0.3-0.8-0.1-1.9 0z" fill="#101515"/>
+  <path d="m95.1 232.4c1 0 9.3-0.7 17.8-14.7l-11.5 7.2-8.5 1.6-6.7 2.6-5.2 6.4c-4.6 6.7-10.3 7.6-14.3 3.9l-4.5-1.2-2.6-1.5 4.4-2.6 8.6-2.1 10.1-1.1" fill="#D0D5D6"/>
+  <path d="m58.1 239.7 4.6-1.7 3.9 7.2-5.2 7.5 0.8-0.6c3.9 0 11.7-0.1 15.7-1.7l0.7-0.9 10.6-4.4 3.8 0.3-3.1 4.6c-3.5 2.2-4.9 1.7-10 0.4l-2.5 0.5-0.3-0.9-19-0.5v-9.8z" fill="#CBCECF"/>
+  <path d="m91.7 231.5c2-0.4 2.9-0.5 4.3 1 3 1.5 5 2.7 8.4 3.7l6 1.2c6.6 0.6 9.7 1.3 12.6 4l5.9 6.2-2.5 0.3-4.5-1.2-2.8-1.7c-1.2-0.9-4.4-1.4-6-1.9l-4.5-2.1-8.9-4.9c-3.7-2.5-5.3-4.9-8-4.6z" fill="#fff"/>
+  <path fill="#101515" d="m93.6 231.5c6 3.9 10.4 5.5 16.3 6 6 0.4 8.7 1.5 11.5 3.4 2.7 2 5.5 5.2 7.6 7 8.7 7.7 14.5 10 21.9 12.2 1.1 0.4-1 1.5-4.5 1.1-3.9-0.3-9.3-2.3-16.4-7.7-4.6-3.5-6.4-8-13.1-11.9-5-2.7-10.4-2.2-14.2-3.4-3.3-0.8-7.5-3.5-9.1-5.6v-1.1z"/>
+  <path fill="#101515" d="m70.7 241.1c-3-1.4-5.7-5.7-12.2-2.5 0.7-1.7 3.7-4.4 4.6-5-3.4 1.6-9.2-1.5-10.2-6.4l5.2-1.1 2.9 6.9 13.9 1.5-5.5 3.5 1.3 3.1z"/>
+  <path d="m58.2 237.6 2-1.6 3.8 0.5-3.1 2.9-2.2 0.2-0.7-0.7 0.2-1.3z" fill="#EEF1EF"/>
+  <path fill="#101515" d="m63.5 234.6c-2.3 1.1-7.5 5.9-7.8 6.3-1 1.2 1.4 2 3.4 0.7-0.6 1-2.7 2-6 1.9-5.1 0.4-7.1 2.4-7.4 2.5l5 0.2-7.5 2.8 3.2 0.4c-0.8 0.3-2 2.7-2.2 4.1l6.4-4.6c-2 1.7-3.9 4.5-4.4 6.2 4.9-0.2 7.7-1.6 10.2-4-0.7 0.5-2.7 4.3-2.9 4.9 1.5-0.5 3.4-1.6 4.6-3.1l-0.4 2.5 1 2.1 1.3-1.9c2.5-1.1 4.5-2 6.7-3.7 5.2 0.1 8 0.2 13-1.4l-0.7-1.1c-2.1 0.6-5.4-1.4-7.5-4.3-2.6-2.6-4.9-6-9.3-6.5-0.3 0-4.1 0.4-5.1 2.3 0.5-2.9 4.4-5.5 6.4-6.3z"/>
+  <path fill="#FFFFFF" d="m56 244.9 3.2-0.9c-1.2 0.9-4.2 2.5-4.8 4l5-2.3-3 2.9 5-2-2.2 2.3c0.7 0 5.3-2.3 7.8-2.5l-3.4 4.3-2.1 2.8 3.7-1.6 4.4-2.9-2.1 2.2c4 0 7.6-0.6 11.5-1.2l-0.9-1c-0.7-2.1-5-3.9-14.6-10.5-1.9-0.5-5.5 1.5-5.8 1.9 2.8-1.4 4.7-1.2 4.9-1.4 0 0.7-3.5 4.6-6.6 5.9z"/>
+  <path fill="#333333" d="m69.9 241c-3.8-2.6-6.8-4.5-11.8-1.6 1.6-2.9 3.3-4.7 8.1-4.9l9.8-0.4c-3.4 0.8-9 0.5-11.8 3 2.9-1.1 5.5 2.3 5.7 3.9z"/>
+  <path d="m63 236.9c4.6-2.5 7.7-1.9 12.9-2.7 3.7-0.7 7.2-3.2 8.2-3.2h-4.2l-5.4 2-6 1c-1.8-0.1-5 0.5-7.3 2l1.8 0.9z" fill="#9BA1A2"/>
+  <path fill="#333333" d="m69.9 240.6c4.1 1.4 7.1-0.5 8.5-1.7 4.5-3.8 6.2-7.4 12.1-10l1.5-2-3.5 1.1-6.5 3c-3.9 3.2-7 3.2-9.4 4.2l-8.5 2 2.8 0.7 4.8 1.7-1.8 1z"/>
+  <path fill="#101515" d="m79.5 241.5c-2.6 2-6.4 3.5-8.8 3.5 1 1.7 4.7 1.5 6.8 1 3.1-1 7.1-3.9 10-8.1 2.5-4 6.2-8.3 12.5-11.3l-6.5 1.4c-2.5 0.5-6.5 2-9.5 5.5-2.3 2.4-4.1 4.9-7.8 5.4"/>
+  <path d="m79 245-3 1.5c1.5 0.2 7-2.1 8.6-3.5l-4.7 2.7 5.5-3.3-0.8-0.5-5.6 3.1z" fill="#585858"/>
+  <path d="m76.9 246.1-1.3 1.1c-1.4 1.7 4.5 1.7 5.4 0.3l4.9-3.6-6.7 3.2 7.2-3.7-2.3-1.3-7.2 4z" fill="#333"/>
+  <path d="m79 248.4c-1 1.6-0.3 2.5 3 2l7.2-5-3-0.8-7.2 3.8z" fill="#2D2D2C"/>
+  <path d="m82 250.5c-1.9 2.5 2.1 2.4 4.4 1.5 2.6-1.5 5.6-3.4 6.2-6l-4.1-0.6-6.5 5.1z" fill="#333"/>
+  <path d="m86 251.6c-2.3 2 0.5 2.4 3.4 1.3 2.6-1.3 3.5-3.3 4-6.4l-4-1.1-3.4 6.2z" fill="#525453"/>
+  <path d="m90.6 252.1c-2.6 2.4-2.5 3 1.8 2 3.5-1.5 5.2-4.6 5.2-7.7l-2.7-1-4.3 6.7z" fill="#656767"/>
+  <path d="m94.1 253.1c-2.1 1.9-1.7 2.5 1.1 2 3.9-1.1 5.8-4.4 6.3-11.1l-7.4 9.1z" fill="#656767"/>
+  <path d="m97.6 253.5c-2.1 2.5-1.5 3.1 1.3 2.2 4.2-1.3 5.7-5.7 5.7-11.7l-7 9.5z" fill="#656767"/>
+  <path fill="#656767" d="m102 253.9c-1.6 2.5-2.5 3.2 0 2.8 4-1.1 4.9-5.1 5.9-11.3l-5.9 8.5z"/>
+  <linearGradient id="hac-SVGID_7_" x1="70.61" x2="82.44" y1="203.5" y2="229" gradientUnits="userSpaceOnUse">
+    <stop stop-color="#CCCCCD" offset="0"/>
+    <stop stop-color="#DFE3E4" offset="1"/>
+  </linearGradient>
+  <path d="m65.4 224.4c6.6-2.9 6.6-9.8 8.6-17.9 1.5-4 3.9-3.5 5.9-1.5l2.2 3.4 1.1 3.6 1.4 6.7 3-0.1h2.4l2.1 7.8-9 4.8-9.6 1.8h-8.5l-3 0.5-2.3-2.4-0.7-2.5c1-3.1 4.9-4 6.4-4.2z" fill="url(#hac-SVGID_7_)"/>
+  <path d="m69 224.4c3.4 0.3 6.5-1 9-3.2 3.4-3.2 5-4.5 9.6-3.8l2.8 0.6 3.6 8.5-4.8 0.5-10.8 4-4.9 2h-8.5l-3 0.5-1-2.5 4.4-6.1 3.6-0.5z" fill="#AEB3B5"/>
+  <path d="m78 231c2.5-2.1 3.6-4.1 5-7.1 1.5-3.5 5.5-4.5 8.4-0.9 1 2-0.4 1.9 0.2 3.4l-3.6 1.1-4.1 3.7-5.9-0.2z" fill="#B4BBBD"/>
+  <path fill="#D7DEE0" d="m82.6 202.9 1.4 2.6c0.9 3 0.5 9 1.9 9.6l3.5 1.9v1.7l-4.8-0.8-1.6-9.3-0.4-5.7z"/>
+  <path fill="#333333" d="m78 200.9 3 3.6 1 3.4c0.1-1.8-1-4.9-5-8l-0.5 1.6 1.5-0.6z"/>
+  <path fill="#191C1C" d="m75.6 194.6c0.5 4 2.4 5 3.5 3.5 0.5-0.5-0.2-0.5-0.4-1.5 0-1.1 0.8-0.7 1.4 0.3 0.9-2.7-2-3.2 2-3.9-0.7-1-2.6-1.1-4.5-0.1-1-3.3-4.2-1.5-3.6 0.7 0.5 1 1.4 1 1.6 1z"/>
+  <path d="m66.6 200.6 0.5 0.5c1-1.7 2.4-2.1 4.5-2.1 4-0.3 4.4-4 4.3-2.6-0.4 3.1-5.9 2.2-5.9 8.1 0.7-4.5 4.6-3.4 5.6-6.5l0.5-2c-2 3.1-3.1 2.6-5.5 2.7-1.2 0.2-2.6 0.4-4 2.4v-0.5z" fill="#333"/>
+  <path fill="#191C1C" d="m81.9 192.9c1.1 0.8 1.1 1.5 1.3 3l0.9 1.2c0.5-0.5-0.9-1.2-0.6-2.1-0.1-1.3-1.1-2-1.6-2.1z"/>
+  <path fill="#191C1C" d="m83.7 197.9c-2.1 0-0.6 2.6-3.3 1.1l0.7 1.4c0.8 0.6-0.6 1.6 0.5 3.6 0-1.5-0.1-3.1 0.8-3.4l0.2 0.4 0.4-0.6 0.2 0.6c0.2 1.4 1.7 2.5 2.7 2.9-2.2-1.7-1.3-3.4-2.2-4.5-0.5 2-1.3 0.5-0.3-0.9h0.5l-0.2-0.6z"/>
+  <path fill="#101515" d="m75.6 202.1c-1.9 1.5-3 2-3.7 6.3l-1.4 7c1.1-2 2.5-8.8 3-9.9 0.6-1.5 1.6-2.5 2.4-3.4h-0.3z"/>
+  <path d="m80.9 214.4c0.5 0.5 2.3 0.6 3.7 0.3l-0.5-9.2 0.4 11.1-3.5-0.9-0.1-1.3z" fill="#656767"/>
+  <path fill="#333333" d="m83.6 205.7c1.9 6.8 1.8 9 4.5 10.2 1.9 0.7 2.6 2.2 3.8 2.6-0.9-2.9-3.9-3.1-4.8-4.5-1.6-2-2-6.4-3.5-8.3z"/>
+  <path fill="#333333" d="m9 196.9"/>
+  <path fill="#101515" d="m77 205.5c1.9 1.7 1.7 5.5 2.5 8-1.1-1-2.5-3.3-3-5.8 0.6 5.3 4.7 7.9 4.7 7.9-2.8-1-5.7 1.4-6.5 1.4-0.7-0.5 2.5-2.1 4.2-2.4-3.7-0.7-6.9 3.4-3.8 2.8 2.1-1 4.3-2.5 6.9-1.4l4 1c-2.5-1-6.8-1.9-9-11.5z"/>
+  <path fill="#101515" d="m83.6 219.4c-3.6 1.5-4.6 6.7-11.1 8.6-2.9 1-7.1 0.9-7.6 3 0 1.4 2.2 1.9 5.2 1.4 7.6-1.7 8.6-2.4 12.8-9.3l1.6-2.1 0.1-0.5c-3.2 1.1-4.9 8.2-10 11-8.2 3-12.5 1.6-8.9-0.4 2.3-1 7.2 0 12.2-4 2.5-2.1 4.1-6.7 6.7-8.4 2.4-0.7 4 0.3 4.8 1.8-1.4 0.4-2.7-1-5.8-1.1z"/>
+  <path fill="#101515" d="m88.1 218.9c0.8 0 6.8-1.4 7.6 3.3l0.3 3.3c1.6-5.1-1.5-6.9-6.9-6.5l-1-0.1z"/>
+  <path fill="#101515" d="m75.1 234.9c6.8-0.5 9.6-6.5 14.9-7.8l4.6-0.6c-9.6 1-12.6 8-19.5 8.4z"/>
+  <path d="m81.5 202.4 0.6 9.6-0.9 2.5 0.9 0.1c1.6-1.9 2.8-7.7-0.6-12.2z" fill="#656767"/>
+  <path d="m126.9 196.9 0.2 2.1 12.9-5.1c-0.5-0.8-8 1.5-13.1 3z" fill="#626363"/>
+  <path d="m126.6 196.7-0.2 2.3 1.6 0.5c0-0.5 1.5-1 11.5-5.4 0.4-0.7-4.3 0.3-12.9 2.6z" fill="#0C1011"/>
+  <path fill="#101515" d="m116.9 203.4c-2 3.5-3.5 9.6-6.4 12.1 3.2-5 3.5-12.6 6.4-16l0.7 0.5c-2.2 2.5-3.9 11.5-7.6 16.9-3.6 5.1-8 8.1-12.6 8.8l-2.8 0.8c6.1-0.4 12.3-0.5 18-8.6-0.6 2.8-6.2 12.5-12 17.2l0.4 0.3c3.9-2.4 9.9-8.9 12.5-15.7 2.4-6.2 3.1-13.2 7.1-15.2 1.1-1 4.4-1.1 7-4.6l0.3-3-3-1-3.4 3.1c-1.6 0.4-2.6 1-3.9 1l-0.7 3.4z"/>
+  <path fill="#E24F36" d="m116.9 199c-0.2 1.9 3.2 0.9 5-0.5 2.1-1.6 3.2 0 3.2-1.4 0-2.2-5.5-2.1-8.2 1.9z"/>
+  <path d="m123.1 199c0.5 1 2 0.1 1.9 0-1 3-4.4 2-7.1 5 2.2-1.6 3.7-0.5 5.2-0.5 1.5-0.6 4.5-2.6 4.8-4l0.1-2.6-2-0.7-2.9 2.8z" fill="#0E0F0E"/>
+  <path fill="#656767" d="m48.6 227-2.9 2c-2.8 3.2-6.2 1.4-3.7-1.6l6.5-4.3 4.2-0.6 1.7 2.5-2 1.2-3.8 0.8z"/>
+  <path fill="#333333" d="m49.5 229.5-1.9 3c-4.4 1.5-5.5-0.5-2-3.1l4.5-3.5 4.9-1.4-2.3 3.1-3.2 1.9z"/>
+  <path fill="#656767" d="m52 232.1-2 3.3c-4.4 0.5-5-1-2.3-3.5l4.7-3.9 3.8 2.6-0.6 2.4-3.1 1.5-0.5-2.4z"/>
+  <path fill="#656767" d="m54.2 236.1c-1.5 1.9-7 1.9-4.1-1.6l4-3.5 2.8 2.1-0.5 2.3-2.2 0.7z"/>
+  <path fill="#333333" d="m53.6 236.9c-1.1 3.2 2.4 2.8 3.3 1.2l2.1-3.1-2.6-1.6-2.8 3.5z"/>
+  <path d="m53 237.5c1.6-0.9 2.9-2.9 3.7-4.5-1.8 1-3.7 2.4-3.7 4.5z" fill="#1B1C1C"/>
+  <path fill="#333333" d="m56.1 239.1c1.6-1.1 1.9-2.9 2.3-3.6-1 0.4-2.5 3.1-2.3 3.6z"/>
+  <path fill="#101515" d="m76 202.2c2.1 0 5 4.2 5.7 6.8l0.3 1-2.3 4-0.5-0.6c1-1 3.2-4.2-1.2-9.2l-2-2z"/>
+  <path fill="#101515" d="m87.2 217.9c-5.3-0.9-7.3 5.5-12.7 8.7-3.4 1.8-9.4 1.3-10.9 4.4-1 3.6 6 2.6 8.3 1.1-10.2 1.9-8-1.6-3.7-2 11.8-1.2 11.9-7.5 15.5-10.7 0.4-0.3 2.5-2.3 3.5-1.5z"/>
+  <path fill="#101515" d="m67.1 246.2c-1.1 0.5-3.5 3.4-5.9 7.3l4.9-2 3.4-2.9-1.8 2.4 2.7-2.6-2.3 2.6 1.9-0.4-2 1.5c-2 1.4-3.4 1.9-7 3.5l-2.4 1.9-0.6-2.5 1-4-0.5-0.5 3.5-4 0.5 1.2 4.6-1.5z"/>
+  <path fill="#333333" d="m39.2 224.2c-2.2 2.3 0.5 2.9 3 2.7l7-4.3-1-3.6-1.6-0.9-7.9 2.9 0.5 3.2z"/>
+  <path fill="#101515" d="m39.2 224.2c-5.5 0.3-5.1-0.8-3-1.5l10.8-4.2h3.2l3.3-0.6c-1.6 0.6-4.4 2.2 0 1.6l-0.1 0.4c-1.8 1-3.4 3 0 2.2l1.3-0.2c-1.8 1.2-4.6 4.2 0.3 2.7-0.3 0.3-2.4 1.4-2.5 2.8l-4 1.6-1.9 3c-0.9 0.5-2.5 0.5-3.2-0.1-0.2-0.5-0.3-1 1.6-2.9 1.2-1.4 4.7-4.5 4.7-4.5-1.5 0.5-5 2.2-7.2 4.5-3.4 0.6-2.8-1-0.5-3.1l5.5-3.9-8.3 2.2z"/>
+  
+  <path d="m83.1 217c-3.5-0.1-6.7 7-13.6 7.2 6.5 0.8 9.9-7.2 14-6.8l-0.4-0.4z" fill="#B1B5B6"/></g>
+            </g>
+          </g>
+        </svg>
+        <p class="colophon">Chỉ số hiệu năng ẩn danh — văn bản dịch không bao giờ rời thiết bị
+          của bạn. Số liệu tổng hợp phía máy chủ, làm mới 5 phút một lần.
+          <a href="/">← Về trang dịch</a></p>
+      </footer>
+    </div>
+  <!-- Cloudflare Pages Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "bbbf22d396224a7787bb7ecb36b80e07"}'></script><!-- Cloudflare Pages Analytics --></body>
+</html>

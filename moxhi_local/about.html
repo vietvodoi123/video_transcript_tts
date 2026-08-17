@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="description" content="Mặc Hi là máy dịch truyện Trung–Việt chạy bằng WebGPU ngay trên thiết bị. Xem cách chọn mô hình, quét tên, dùng từ điển và đọc offline." />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <link rel="canonical" href="https://moxhi.vietphrase.app/about" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://moxhi.vietphrase.app/about" />
+    <meta property="og:site_name" content="Mặc Hi" />
+    <meta property="og:locale" content="vi_VN" />
+    <meta property="og:title" content="Mặc Hi là gì? Hướng dẫn dịch truyện ngay trên máy" />
+    <meta property="og:description" content="Cách dùng Mặc Hi, chọn mô hình, quét tên và tạo từ điển riêng cho truyện phương Tây, Nhật Bản hoặc nhiều thuật ngữ." />
+    <meta property="og:image" content="https://moxhi.vietphrase.app/og.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Mặc Hi là gì? Hướng dẫn dịch truyện ngay trên máy" />
+    <meta name="twitter:description" content="Máy dịch Trung–Việt bằng WebGPU; văn bản không rời khỏi thiết bị và có thể đọc tiếp khi offline." />
+    <meta name="twitter:image" content="https://moxhi.vietphrase.app/og.jpg" />
+    <title>Mặc Hi là gì? Hướng dẫn dịch truyện Trung–Việt trên máy</title>
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <meta name="theme-color" content="#b3372f" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23b3372f'/%3E%3Ctext x='32' y='30' font-size='26' text-anchor='middle' fill='%23f4eee3' font-family='serif'%3E墨%3C/text%3E%3Ctext x='32' y='56' font-size='26' text-anchor='middle' fill='%23f4eee3' font-family='serif'%3E曦%3C/text%3E%3C/svg%3E" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "AboutPage",
+            "@id": "https://moxhi.vietphrase.app/about#page",
+            "url": "https://moxhi.vietphrase.app/about",
+            "name": "Mặc Hi là gì? Hướng dẫn dịch truyện Trung–Việt trên máy",
+            "description": "Hướng dẫn sử dụng máy dịch truyện Trung–Việt Mặc Hi, gồm cách chọn mô hình, quét tên, dùng từ điển và chạy offline.",
+            "inLanguage": "vi",
+            "isPartOf": {
+              "@id": "https://moxhi.vietphrase.app/#website"
+            },
+            "about": {
+              "@id": "https://moxhi.vietphrase.app/#app"
+            }
+          },
+          {
+            "@type": "FAQPage",
+            "@id": "https://moxhi.vietphrase.app/about#faq",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Mặc Hi có gửi văn bản truyện lên máy chủ không?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Không. Mô hình dịch chạy bằng WebGPU trên thiết bị; văn bản nguồn và bản dịch không rời khỏi máy."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Mặc Hi có dùng được khi không có mạng không?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Có thể. Sau lần tải đầu, mô hình và ứng dụng được lưu trong bộ nhớ đệm của trình duyệt và tiếp tục hoạt động offline nếu dữ liệu trang chưa bị xóa."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Khi nào nên dùng Quét tên và từ điển tên riêng?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Nên quét tên trước khi dịch truyện có nhiều nhân vật, địa danh, tổ chức hoặc tên phiên âm tiếng Anh và tiếng Nhật; sau đó thêm cách viết muốn giữ cố định vào từ điển."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+    <link rel="stylesheet" crossorigin href="/assets/about-BRw9WSHl.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#noi-dung">Bỏ qua điều hướng</a>
+    <div class="about-page">
+      <header class="site-nav">
+        <a class="wordmark" href="/" aria-label="Mặc Hi — mở máy dịch">
+          <svg class="wordmark__seal" viewBox="0 0 64 64" aria-hidden="true">
+            <rect class="wordmark__field" x="1.5" y="1.5" width="61" height="61" rx="7" />
+            <rect class="wordmark__rule" x="5" y="5" width="54" height="54" rx="4" />
+            <text x="32" y="29" text-anchor="middle">墨</text>
+            <text x="32" y="55" text-anchor="middle">曦</text>
+          </svg>
+          <span class="wordmark__text">
+            <strong>Mặc Hi</strong>
+            <span aria-hidden="true">墨曦</span>
+          </span>
+        </a>
+        <nav class="primary-nav" aria-label="Điều hướng chính">
+          <a href="/">Mở máy dịch</a>
+          <a href="/board">Bảng tốc độ</a>
+        </nav>
+      </header>
+
+      <main id="noi-dung">
+        <section class="hero" aria-labelledby="about-title">
+          <p class="eyebrow">Máy dịch truyện Trung–Việt bằng WebGPU</p>
+          <h1 id="about-title">Dịch truyện, ngay trên máy bạn</h1>
+          <p class="hero__lead">Mặc Hi chạy mô hình dịch trên GPU của thiết bị,
+            không cần gửi nội dung truyện tới một máy chủ dịch. Sau lần tải đầu,
+            bạn có thể tiếp tục đọc khi offline.</p>
+          <p class="hero__promise"><strong>Văn bản không rời khỏi máy.</strong>
+            Bản gốc, bản dịch, từ điển và bộ nhớ dịch đều được xử lý cục bộ
+            trong trình duyệt.</p>
+        </section>
+
+        <article class="guide" aria-label="Hướng dẫn sử dụng Mặc Hi">
+          <section class="chapter" id="bat-dau" aria-labelledby="bat-dau-title">
+            <header class="chapter__heading">
+              <span class="chapter__marker" aria-hidden="true">01</span>
+              <div>
+                <p class="chapter__kicker">Từ văn bản đến bản dịch</p>
+                <h2 id="bat-dau-title">Bắt đầu trong ba bước</h2>
+              </div>
+            </header>
+            <div class="chapter__body">
+              <ol class="steps">
+                <li>
+                  <span class="steps__number" aria-hidden="true">1</span>
+                  <p><strong>Chọn mô hình.</strong> Dùng Mặc Hi 30 làm lựa chọn
+                    mặc định; chuyển sang Hachimi 60 khi muốn so sánh một bản
+                    dịch từ mô hình lớn hơn.</p>
+                </li>
+                <li>
+                  <span class="steps__number" aria-hidden="true">2</span>
+                  <p><strong>Đưa truyện vào.</strong> Dán văn bản, hoặc mở/thả
+                    một file <code>.txt</code>. Nếu truyện có nhiều tên phiên
+                    âm, hãy Quét tên trước khi dịch.</p>
+                </li>
+                <li>
+                  <span class="steps__number" aria-hidden="true">3</span>
+                  <p><strong>Dịch và đọc.</strong> Bấm <b>Dịch</b> hoặc
+                    <kbd>Ctrl</kbd> + <kbd>Enter</kbd>, rồi chép kết quả hay tải
+                    xuống thành file <code>.txt</code>.</p>
+                </li>
+              </ol>
+            </div>
+          </section>
+
+          <section class="chapter chapter--models" id="mo-hinh" aria-labelledby="mo-hinh-title">
+            <header class="chapter__heading">
+              <span class="chapter__marker" aria-hidden="true">02</span>
+              <div>
+                <p class="chapter__kicker">Chọn vừa đủ cho lần đọc</p>
+                <h2 id="mo-hinh-title">Mô hình và dữ liệu tải xuống</h2>
+              </div>
+            </header>
+            <div class="chapter__body">
+              <p>Trình duyệt chỉ tải dữ liệu của tính năng bạn dùng. Các con số
+                dưới đây là dung lượng tải gần đúng ở lần đầu; những lần sau
+                dùng lại dữ liệu đã lưu trong bộ nhớ đệm.</p>
+              <table class="model-table">
+                <thead>
+                  <tr>
+                    <th scope="col">Lựa chọn</th>
+                    <th scope="col">Nên dùng khi</th>
+                    <th scope="col">Tải lần đầu</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row" data-label="Lựa chọn">Mặc Hi 30</th>
+                    <td data-label="Nên dùng khi">Đọc hằng ngày; gọn và là lựa chọn mặc định.</td>
+                    <td data-label="Tải lần đầu">Khoảng 74&nbsp;MB</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" data-label="Lựa chọn">Hachimi 60</th>
+                    <td data-label="Nên dùng khi">Muốn so sánh bản dịch từ mô hình lớn hơn.</td>
+                    <td data-label="Tải lần đầu">Khoảng 113&nbsp;MB</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" data-label="Lựa chọn">Quét tên</th>
+                    <td data-label="Nên dùng khi">Truyện có nhiều nhân vật, địa danh hoặc tổ chức.</td>
+                    <td data-label="Tải lần đầu">Khoảng 29&nbsp;MB</td>
+                  </tr>
+                </tbody>
+              </table>
+              <nav class="resource-links" aria-label="Thẻ mô hình">
+                <a href="https://huggingface.co/DanVP/MoxhiMT-30-QT" target="_blank" rel="noopener">Mặc Hi 30 · thẻ mô hình</a>
+                <a href="https://huggingface.co/ngocdang83/HachimiMT-60-QT" target="_blank" rel="noopener">Hachimi 60 · thẻ mô hình</a>
+              </nav>
+            </div>
+          </section>
+
+          <section class="chapter" id="tu-dien" aria-labelledby="tu-dien-title">
+            <header class="chapter__heading">
+              <span class="chapter__marker" aria-hidden="true">03</span>
+              <div>
+                <p class="chapter__kicker">Giữ tên gọi nhất quán</p>
+                <h2 id="tu-dien-title">Khi nào nên Quét tên và dùng từ điển?</h2>
+              </div>
+            </header>
+            <div class="chapter__body">
+              <p><strong class="inline-heading">Quét tên trước khi dịch.</strong>
+                Tính năng này hữu ích nhất với truyện có nhiều nhân vật, địa
+                danh, tổ chức, hoặc tên phiên âm trong bối cảnh phương Tây và
+                Nhật Bản. Bạn xem các tên được gợi ý, chọn cách viết muốn dùng,
+                rồi thêm chúng vào từ điển. Ví dụ:
+                <code>爱丽丝 → Alice</code> và <code>雪乃 → Yukino</code>.</p>
+              <dl class="term-examples" aria-label="Ví dụ từ điển tên riêng">
+                <div>
+                  <dt lang="zh-Hans">爱丽丝</dt>
+                  <dd><span aria-hidden="true">→</span> Alice <small>tên tiếng Anh</small></dd>
+                </div>
+                <div>
+                  <dt lang="zh-Hans">雪乃</dt>
+                  <dd><span aria-hidden="true">→</span> Yukino <small>tên tiếng Nhật</small></dd>
+                </div>
+              </dl>
+              <p><strong class="inline-heading">Dùng từ điển khi một cách gọi
+                  phải giữ nguyên.</strong> Ngoài tên riêng, bạn có thể cố định
+                danh xưng hoặc thuật ngữ xuất hiện nhiều lần. Từ điển áp dụng
+                cho các lượt dịch; bộ nhớ dịch được tách riêng theo từng mô
+                hình để kết quả không lẫn nhau.</p>
+            </div>
+          </section>
+
+          <section class="chapter chapter--compact" id="thiet-bi" aria-labelledby="thiet-bi-title">
+            <header class="chapter__heading">
+              <span class="chapter__marker" aria-hidden="true">04</span>
+              <div>
+                <p class="chapter__kicker">Những điều cần biết</p>
+                <h2 id="thiet-bi-title">Trình duyệt, file và quyền riêng tư</h2>
+              </div>
+            </header>
+            <div class="chapter__body prose-list">
+              <p><strong class="inline-heading">Trình duyệt.</strong> Cần
+                Chrome hoặc Edge 113+ hay Safari 26+ có WebGPU. Nếu máy có GPU
+                rời nhưng trình duyệt đang dùng GPU tích hợp, chọn chế độ
+                <i>High performance</i> cho trình duyệt trong phần Graphics của
+                Windows rồi mở lại.</p>
+              <p><strong class="inline-heading">File truyện.</strong> Mặc Hi
+                nhận file <code>.txt</code> tối đa 20&nbsp;MB và tự nhận diện
+                UTF-8, GB18030/GBK hoặc Big5.</p>
+              <p><strong class="inline-heading">Dùng offline.</strong> Sau lần
+                tải đầu, ứng dụng và mô hình được lưu trong bộ nhớ đệm. Bạn có
+                thể tiếp tục dịch khi mất mạng, miễn là trình duyệt chưa xóa dữ
+                liệu của trang.</p>
+              <p><strong class="inline-heading">Quyền riêng tư.</strong> Văn
+                bản nguồn và bản dịch ở lại trên thiết bị. Benchmark hoặc báo
+                lỗi chỉ được gửi sau khi bạn chủ động xác nhận; đoạn văn chỉ
+                đính kèm khi bạn tự chọn.</p>
+            </div>
+          </section>
+
+          <section class="chapter chapter--faq" id="cau-hoi" aria-labelledby="cau-hoi-title">
+            <header class="chapter__heading">
+              <span class="chapter__marker" aria-hidden="true">05</span>
+              <div>
+                <p class="chapter__kicker">Trả lời ngắn</p>
+                <h2 id="cau-hoi-title">Câu hỏi thường gặp</h2>
+              </div>
+            </header>
+            <div class="chapter__body faq">
+              <section aria-labelledby="faq-server">
+                <h3 id="faq-server">Mặc Hi có gửi văn bản truyện lên máy chủ không?</h3>
+                <p>Không. Mô hình dịch chạy bằng WebGPU trên thiết bị; văn bản
+                  nguồn và bản dịch không rời khỏi máy.</p>
+              </section>
+              <section aria-labelledby="faq-offline">
+                <h3 id="faq-offline">Mặc Hi có dùng được khi không có mạng không?</h3>
+                <p>Có thể. Hãy mở trang và tải mô hình một lần khi đang có mạng.
+                  Sau đó ứng dụng dùng bản đã lưu trong bộ nhớ đệm, trừ khi dữ
+                  liệu trang bị trình duyệt xóa.</p>
+              </section>
+              <section aria-labelledby="faq-glossary">
+                <h3 id="faq-glossary">Có cần dùng từ điển cho mọi truyện không?</h3>
+                <p>Không. Từ điển đáng dùng khi truyện có tên phiên âm, cách
+                  gọi riêng, danh xưng hoặc thuật ngữ cần giữ nhất quán. Với
+                  đoạn văn ngắn và tên Hán–Việt quen thuộc, bạn có thể dịch
+                  thẳng.</p>
+              </section>
+            </div>
+          </section>
+        </article>
+
+        <section class="closing" aria-labelledby="closing-title">
+          <p class="eyebrow">Sẵn sàng đọc</p>
+          <h2 id="closing-title">Mở máy dịch, chọn mô hình và bắt đầu.</h2>
+          <nav class="closing__links" aria-label="Tiếp tục với Mặc Hi">
+            <a class="route-link route-link--primary" href="/">Mở máy dịch <span aria-hidden="true">→</span></a>
+            <a class="route-link" href="/board">Xem bảng tốc độ <span aria-hidden="true">→</span></a>
+          </nav>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <p>Mặc Hi · dịch truyện Trung–Việt trên thiết bị</p>
+        <nav aria-label="Điều hướng cuối trang">
+          <a href="/">Máy dịch</a>
+          <a href="/board">Bảng tốc độ</a>
+        </nav>
+      </footer>
+    </div>
+  <!-- Cloudflare Pages Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "bbbf22d396224a7787bb7ecb36b80e07"}'></script><!-- Cloudflare Pages Analytics --></body>
+</html>

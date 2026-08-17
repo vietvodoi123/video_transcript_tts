@@ -1,0 +1,2 @@
+function n(m){let r;try{r=window[`${m}Storage`];const e="moxhi.storage.probe";r.setItem(e,"1"),r.removeItem(e)}catch{const e=new Map;return{persistent:!1,getItem:t=>e.get(t)??null,setItem:(t,s)=>{e.set(t,String(s))},removeItem:t=>{e.delete(t)}}}return{persistent:!0,getItem:e=>{try{return r.getItem(e)}catch{return null}},setItem:(e,t)=>{try{r.setItem(e,t)}catch{}},removeItem:e=>{try{r.removeItem(e)}catch{}}}}export{n as s};
+//# sourceMappingURL=safe_storage-BYkOahew.js.map

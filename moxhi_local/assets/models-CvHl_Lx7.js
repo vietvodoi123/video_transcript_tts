@@ -1,0 +1,2 @@
+const h=[{id:"moxhi",name:"Mặc Hi 30",weightsUrl:"/weights",tokenizerId:"moxhi",downloadMB:74,credit:{label:"mô hình MoxhiMT-30-QT",url:"https://huggingface.co/DanVP/MoxhiMT-30-QT"},tokRev:"v4.0.1"},{id:"hachimi60",name:"Hachimi 60",weightsUrl:"/weights/hachimi60",tokenizerId:"hachimi60",downloadMB:113,credit:{label:"mô hình HachimiMT-60-QT",url:"https://huggingface.co/ngocdang83/HachimiMT-60-QT"},tokRev:"v4.0.1"}],o="moxhi";function n(e){return h.find(i=>i.id===e)??h.find(i=>i.id===o)}export{o as D,h as M,n as m};
+//# sourceMappingURL=models-CvHl_Lx7.js.map

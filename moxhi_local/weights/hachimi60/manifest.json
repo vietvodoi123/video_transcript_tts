@@ -1,0 +1,1353 @@
+{
+ "version": 1,
+ "dtypeDefault": "f16",
+ "model": {
+  "dModel": 576,
+  "heads": 8,
+  "headDim": 72,
+  "ffn": 2304,
+  "encLayers": 8,
+  "decLayers": 2,
+  "vocab": 24000,
+  "maxPos": 512,
+  "srcCap": 320,
+  "decodeCap": 224,
+  "eos": 2,
+  "pad": 0,
+  "decoderStart": 0,
+  "lnEps": 0.00001
+ },
+ "tensors": [
+  {
+   "name": "shared.weight",
+   "dtype": "f16",
+   "shape": [
+    24000,
+    576
+   ],
+   "byteOffset": 0,
+   "byteLength": 27648000
+  },
+  {
+   "name": "pos_embed",
+   "dtype": "f16",
+   "shape": [
+    512,
+    576
+   ],
+   "byteOffset": 27648000,
+   "byteLength": 589824
+  },
+  {
+   "name": "final_logits_bias",
+   "dtype": "f32",
+   "shape": [
+    24000
+   ],
+   "byteOffset": 28237824,
+   "byteLength": 96000
+  },
+  {
+   "name": "enc.0.qkv.weight",
+   "dtype": "f16",
+   "shape": [
+    576,
+    1728
+   ],
+   "byteOffset": 28333824,
+   "byteLength": 1990656
+  },
+  {
+   "name": "enc.0.qkv.bias",
+   "dtype": "f16",
+   "shape": [
+    1728
+   ],
+   "byteOffset": 30324480,
+   "byteLength": 3456
+  },
+  {
+   "name": "enc.0.out.weight",
+   "dtype": "f16",
+   "shape": [
+    576,
+    576
+   ],
+   "byteOffset": 30328064,
+   "byteLength": 663552
+  },
+  {
+   "name": "enc.0.out.bias",
+   "dtype": "f16",
+   "shape": [
+    576
+   ],
+   "byteOffset": 30991616,
+   "byteLength": 1152
+  },
+  {
+   "name": "enc.0.ln1.weight",
+   "dtype": "f16",
+   "shape": [
+    576
+   ],
+   "byteOffset": 30992896,
+   "byteLength": 1152
+  },
+  {
+   "name": "enc.0.ln1.bias",
+   "dtype": "f16",
+   "shape": [
+    576
+   ],
+   "byteOffset": 30994176,
+   "byteLength": 1152
+  },
+  {
+   "name": "enc.0.fc1.weight",
+   "dtype": "f16",
+   "shape": [
+    576,
+    2304
+   ],
+   "byteOffset": 30995456,
+   "byteLength": 2654208
+  },
+  {
+   "name": "enc.0.fc1.bias",
+   "dtype": "f16",
+   "shape": [
+    2304
+   ],
+   "byteOffset": 33649664,
+   "byteLength": 4608
+  },
+  {
+   "name": "enc.0.fc2.weight",
+   "dtype": "f16",
+   "shape": [
+    2304,
+    576
+   ],
+   "byteOffset": 33654272,
+   "byteLength": 2654208
+  },
+  {
+   "name": "enc.0.fc2.bias",
+   "dtype": "f16",
+   "shape": [
+    576
+   ],
+   "byteOffset": 36308480,
+   "byteLength": 1152
+  },
+  {
+   "name": "enc.0.ln2.weight",
+   "dtype": "f16",
+   "shape": [
+    576
+   ],
+   "byteOffset": 36309760,
+   "byteLength": 1152
+  },
+  {
+   "name": "enc.0.ln2.bias",
+   "dtype": "f16",
+   "shape": [
+    576
+   ],
+   "byteOffset": 36311040,
+   "byteLength": 1152
+  },
+  {
+   "name": "enc.1.qkv.weight",
+   "dtype": "f16",
+   "shape": [
+    576,
+    1728
+   ],
+   "byteOffset": 36312320,
+   "byteLength": 1990656
+  },
+  {
+   "name": "enc.1.qkv.bias",
+   "dtype": "f16",
+   "shape": [
+    1728
+   ],
+   "byteOffset": 38302976,
+   "byteLength": 3456
+  },
+  {
+   "name": "enc.1.out.weight",
+   "dtype": "f16",
+   "shape": [
+    576,
+    576
+   ],
+   "byteOffset": 38306560,
+   "byteLength": 663552
+  },
+  {
+   "name": "enc.1.out.bias",
+   "dtype": "f16",
+   "shape": [
+    576
+   ],
+   "byteOffset": 38970112,
+   "byteLength": 1152
+  },
+  {
+   "name": "enc.1.ln1.weight",
+   "dtype": "f16",
+   "shape": [
+    576
+   ],
+   "byteOffset": 38971392,
+   "byteLength": 1152
+  },
+  {
+   "name": "enc.1.ln1.bias",
+   "dtype": "f16",
+   "shape": [
+    576
+   ],
+   "byteOffset": 38972672,
+   "byteLength": 1152
+  },
+  {
+   "name": "enc.1.fc1.weight",
+   "dtype": "f16",
+   "shape": [
+    576,
+    2304
+   ],
+   "byteOffset": 38973952,
+   "byteLength": 2654208
+  },
+  {
+   "name": "enc.1.fc1.bias",
+   "dtype": "f16",
+   "shape": [
+    2304
+   ],
+   "byteOffset": 41628160,
+   "byteLength": 4608
+  },
+  {
+   "name": "enc.1.fc2.weight",
+   "dtype": "f16",
+   "shape": [
+    2304,
+    576
+   ],
+   "byteOffset": 41632768,
+   "byteLength": 2654208
+  },
+  {
+   "name": "enc.1.fc2.bias",
+   "dtype": "f16",
+   "shape": [
+    576
+   ],
+   "byteOffset": 44286976,
+   "byteLength": 1152
+  },
+  {
+   "name": "enc.1.ln2.weight",
+   "dtype": "f16",
+   "shape": [
+    576
+   ],
+   "byteOffset": 44288256,
+   "byteLength": 1152
+  },
+  {
+   "name": "enc.1.ln2.bias",
+   "dtype": "f16",
+   "shape": [
+    576
+   ],
+   "byteOffset": 44289536,
+   "byteLength": 1152
+  },
+  {
+   "name": "enc.2.qkv.weight",
+   "dtype": "f16",
+   "shape": [
+    576,
+    1728
+   ],
+   "byteOffset": 44290816,
+   "byteLength": 1990656
+  },
+  {
+   "name": "enc.2.qkv.bias",
+   "dtype": "f16",
+   "shape": [
+    1728
+   ],
+   "byteOffset": 46281472,
+   "byteLength": 3456
+  },
+  {
+   "name": "enc.2.out.weight",
+   "dtype": "f16",
+   "shape": [
+    576,
+    576
+   ],
+   "byteOffset": 46285056,
+   "byteLength": 663552
+  },
+  {
+   "name": "enc.2.out.bias",
+   "dtype": "f16",
+   "shape": [
+    576
+   ],
+   "byteOffset": 46948608,
+   "byteLength": 1152
+  },
+  {
+   "name": "enc.2.ln1.weight",
+   "dtype": "f16",
+   "shape": [
+    576
+   ],
+   "byteOffset": 46949888,
+   "byteLength": 1152
+  },
+  {
+   "name": "enc.2.ln1.bias",
+   "dtype": "f16",
+   "shape": [
+    576
+   ],
+   "byteOffset": 46951168,
+   "byteLength": 1152
+  },
+  {
+   "name": "enc.2.fc1.weight",
+   "dtype": "f16",
+   "shape": [
+    576,
+    2304
+   ],
+   "byteOffset": 46952448,
+   "byteLength": 2654208
+  },
+  {
+   "name": "enc.2.fc1.bias",
+   "dtype": "f16",
+   "shape": [
+    2304
+   ],
+   "byteOffset": 49606656,
+   "byteLength": 4608
+  },
+  {
+   "name": "enc.2.fc2.weight",
+   "dtype": "f16",
+   "shape": [
+    2304,
+    576
+   ],
+   "byteOffset": 49611264,
+   "byteLength": 2654208
+  },
+  {
+   "name": "enc.2.fc2.bias",
+   "dtype": "f16",
+   "shape": [
+    576
+   ],
+   "byteOffset": 52265472,
+   "byteLength": 1152
+  },
+  {
+   "name": "enc.2.ln2.weight",
+   "dtype": "f16",
+   "shape": [
+    576
+   ],
+   "byteOffset": 52266752,
+   "byteLength": 1152
+  },
+  {
+   "name": "enc.2.ln2.bias",
+   "dtype": "f16",
+   "shape": [
+    576
+   ],
+   "byteOffset": 52268032,
+   "byteLength": 1152
+  },
+  {
+   "name": "enc.3.qkv.weight",
+   "dtype": "f16",
+   "shape": [
+    576,
+    1728
+   ],
+   "byteOffset": 52269312,
+   "byteLength": 1990656
+  },
+  {
+   "name": "enc.3.qkv.bias",
+   "dtype": "f16",
+   "shape": [
+    1728
+   ],
+   "byteOffset": 54259968,
+   "byteLength": 3456
+  },
+  {
+   "name": "enc.3.out.weight",
+   "dtype": "f16",
+   "shape": [
+    576,
+    576
+   ],
+   "byteOffset": 54263552,
+   "byteLength": 663552
+  },
+  {
+   "name": "enc.3.out.bias",
+   "dtype": "f16",
+   "shape": [
+    576
+   ],
+   "byteOffset": 54927104,
+   "byteLength": 1152
+  },
+  {
+   "name": "enc.3.ln1.weight",
+   "dtype": "f16",
+   "shape": [
+    576
+   ],
+   "byteOffset": 54928384,
+   "byteLength": 1152
+  },
+  {
+   "name": "enc.3.ln1.bias",
+   "dtype": "f16",
+   "shape": [
+    576
+   ],
+   "byteOffset": 54929664,
+   "byteLength": 1152
+  },
+  {
+   "name": "enc.3.fc1.weight",
+   "dtype": "f16",
+   "shape": [
+    576,
+    2304
+   ],
+   "byteOffset": 54930944,
+   "byteLength": 2654208
+  },
+  {
+   "name": "enc.3.fc1.bias",
+   "dtype": "f16",
+   "shape": [
+    2304
+   ],
+   "byteOffset": 57585152,
+   "byteLength": 4608
+  },
+  {
+   "name": "enc.3.fc2.weight",
+   "dtype": "f16",
+   "shape": [
+    2304,
+    576
+   ],
+   "byteOffset": 57589760,
+   "byteLength": 2654208
+  },
+  {
+   "name": "enc.3.fc2.bias",
+   "dtype": "f16",
+   "shape": [
+    576
+   ],
+   "byteOffset": 60243968,
+   "byteLength": 1152
+  },
+  {
+   "name": "enc.3.ln2.weight",
+   "dtype": "f16",
+   "shape": [
+    576
+   ],
+   "byteOffset": 60245248,
+   "byteLength": 1152
+  },
+  {
+   "name": "enc.3.ln2.bias",
+   "dtype": "f16",
+   "shape": [
+    576
+   ],
+   "byteOffset": 60246528,
+   "byteLength": 1152
+  },
+  {
+   "name": "enc.4.qkv.weight",
+   "dtype": "f16",
+   "shape": [
+    576,
+    1728
+   ],
+   "byteOffset": 60247808,
+   "byteLength": 1990656
+  },
+  {
+   "name": "enc.4.qkv.bias",
+   "dtype": "f16",
+   "shape": [
+    1728
+   ],
+   "byteOffset": 62238464,
+   "byteLength": 3456
+  },
+  {
+   "name": "enc.4.out.weight",
+   "dtype": "f16",
+   "shape": [
+    576,
+    576
+   ],
+   "byteOffset": 62242048,
+   "byteLength": 663552
+  },
+  {
+   "name": "enc.4.out.bias",
+   "dtype": "f16",
+   "shape": [
+    576
+   ],
+   "byteOffset": 62905600,
+   "byteLength": 1152
+  },
+  {
+   "name": "enc.4.ln1.weight",
+   "dtype": "f16",
+   "shape": [
+    576
+   ],
+   "byteOffset": 62906880,
+   "byteLength": 1152
+  },
+  {
+   "name": "enc.4.ln1.bias",
+   "dtype": "f16",
+   "shape": [
+    576
+   ],
+   "byteOffset": 62908160,
+   "byteLength": 1152
+  },
+  {
+   "name": "enc.4.fc1.weight",
+   "dtype": "f16",
+   "shape": [
+    576,
+    2304
+   ],
+   "byteOffset": 62909440,
+   "byteLength": 2654208
+  },
+  {
+   "name": "enc.4.fc1.bias",
+   "dtype": "f16",
+   "shape": [
+    2304
+   ],
+   "byteOffset": 65563648,
+   "byteLength": 4608
+  },
+  {
+   "name": "enc.4.fc2.weight",
+   "dtype": "f16",
+   "shape": [
+    2304,
+    576
+   ],
+   "byteOffset": 65568256,
+   "byteLength": 2654208
+  },
+  {
+   "name": "enc.4.fc2.bias",
+   "dtype": "f16",
+   "shape": [
+    576
+   ],
+   "byteOffset": 68222464,
+   "byteLength": 1152
+  },
+  {
+   "name": "enc.4.ln2.weight",
+   "dtype": "f16",
+   "shape": [
+    576
+   ],
+   "byteOffset": 68223744,
+   "byteLength": 1152
+  },
+  {
+   "name": "enc.4.ln2.bias",
+   "dtype": "f16",
+   "shape": [
+    576
+   ],
+   "byteOffset": 68225024,
+   "byteLength": 1152
+  },
+  {
+   "name": "enc.5.qkv.weight",
+   "dtype": "f16",
+   "shape": [
+    576,
+    1728
+   ],
+   "byteOffset": 68226304,
+   "byteLength": 1990656
+  },
+  {
+   "name": "enc.5.qkv.bias",
+   "dtype": "f16",
+   "shape": [
+    1728
+   ],
+   "byteOffset": 70216960,
+   "byteLength": 3456
+  },
+  {
+   "name": "enc.5.out.weight",
+   "dtype": "f16",
+   "shape": [
+    576,
+    576
+   ],
+   "byteOffset": 70220544,
+   "byteLength": 663552
+  },
+  {
+   "name": "enc.5.out.bias",
+   "dtype": "f16",
+   "shape": [
+    576
+   ],
+   "byteOffset": 70884096,
+   "byteLength": 1152
+  },
+  {
+   "name": "enc.5.ln1.weight",
+   "dtype": "f16",
+   "shape": [
+    576
+   ],
+   "byteOffset": 70885376,
+   "byteLength": 1152
+  },
+  {
+   "name": "enc.5.ln1.bias",
+   "dtype": "f16",
+   "shape": [
+    576
+   ],
+   "byteOffset": 70886656,
+   "byteLength": 1152
+  },
+  {
+   "name": "enc.5.fc1.weight",
+   "dtype": "f16",
+   "shape": [
+    576,
+    2304
+   ],
+   "byteOffset": 70887936,
+   "byteLength": 2654208
+  },
+  {
+   "name": "enc.5.fc1.bias",
+   "dtype": "f16",
+   "shape": [
+    2304
+   ],
+   "byteOffset": 73542144,
+   "byteLength": 4608
+  },
+  {
+   "name": "enc.5.fc2.weight",
+   "dtype": "f16",
+   "shape": [
+    2304,
+    576
+   ],
+   "byteOffset": 73546752,
+   "byteLength": 2654208
+  },
+  {
+   "name": "enc.5.fc2.bias",
+   "dtype": "f16",
+   "shape": [
+    576
+   ],
+   "byteOffset": 76200960,
+   "byteLength": 1152
+  },
+  {
+   "name": "enc.5.ln2.weight",
+   "dtype": "f16",
+   "shape": [
+    576
+   ],
+   "byteOffset": 76202240,
+   "byteLength": 1152
+  },
+  {
+   "name": "enc.5.ln2.bias",
+   "dtype": "f16",
+   "shape": [
+    576
+   ],
+   "byteOffset": 76203520,
+   "byteLength": 1152
+  },
+  {
+   "name": "enc.6.qkv.weight",
+   "dtype": "f16",
+   "shape": [
+    576,
+    1728
+   ],
+   "byteOffset": 76204800,
+   "byteLength": 1990656
+  },
+  {
+   "name": "enc.6.qkv.bias",
+   "dtype": "f16",
+   "shape": [
+    1728
+   ],
+   "byteOffset": 78195456,
+   "byteLength": 3456
+  },
+  {
+   "name": "enc.6.out.weight",
+   "dtype": "f16",
+   "shape": [
+    576,
+    576
+   ],
+   "byteOffset": 78199040,
+   "byteLength": 663552
+  },
+  {
+   "name": "enc.6.out.bias",
+   "dtype": "f16",
+   "shape": [
+    576
+   ],
+   "byteOffset": 78862592,
+   "byteLength": 1152
+  },
+  {
+   "name": "enc.6.ln1.weight",
+   "dtype": "f16",
+   "shape": [
+    576
+   ],
+   "byteOffset": 78863872,
+   "byteLength": 1152
+  },
+  {
+   "name": "enc.6.ln1.bias",
+   "dtype": "f16",
+   "shape": [
+    576
+   ],
+   "byteOffset": 78865152,
+   "byteLength": 1152
+  },
+  {
+   "name": "enc.6.fc1.weight",
+   "dtype": "f16",
+   "shape": [
+    576,
+    2304
+   ],
+   "byteOffset": 78866432,
+   "byteLength": 2654208
+  },
+  {
+   "name": "enc.6.fc1.bias",
+   "dtype": "f16",
+   "shape": [
+    2304
+   ],
+   "byteOffset": 81520640,
+   "byteLength": 4608
+  },
+  {
+   "name": "enc.6.fc2.weight",
+   "dtype": "f16",
+   "shape": [
+    2304,
+    576
+   ],
+   "byteOffset": 81525248,
+   "byteLength": 2654208
+  },
+  {
+   "name": "enc.6.fc2.bias",
+   "dtype": "f16",
+   "shape": [
+    576
+   ],
+   "byteOffset": 84179456,
+   "byteLength": 1152
+  },
+  {
+   "name": "enc.6.ln2.weight",
+   "dtype": "f16",
+   "shape": [
+    576
+   ],
+   "byteOffset": 84180736,
+   "byteLength": 1152
+  },
+  {
+   "name": "enc.6.ln2.bias",
+   "dtype": "f16",
+   "shape": [
+    576
+   ],
+   "byteOffset": 84182016,
+   "byteLength": 1152
+  },
+  {
+   "name": "enc.7.qkv.weight",
+   "dtype": "f16",
+   "shape": [
+    576,
+    1728
+   ],
+   "byteOffset": 84183296,
+   "byteLength": 1990656
+  },
+  {
+   "name": "enc.7.qkv.bias",
+   "dtype": "f16",
+   "shape": [
+    1728
+   ],
+   "byteOffset": 86173952,
+   "byteLength": 3456
+  },
+  {
+   "name": "enc.7.out.weight",
+   "dtype": "f16",
+   "shape": [
+    576,
+    576
+   ],
+   "byteOffset": 86177536,
+   "byteLength": 663552
+  },
+  {
+   "name": "enc.7.out.bias",
+   "dtype": "f16",
+   "shape": [
+    576
+   ],
+   "byteOffset": 86841088,
+   "byteLength": 1152
+  },
+  {
+   "name": "enc.7.ln1.weight",
+   "dtype": "f16",
+   "shape": [
+    576
+   ],
+   "byteOffset": 86842368,
+   "byteLength": 1152
+  },
+  {
+   "name": "enc.7.ln1.bias",
+   "dtype": "f16",
+   "shape": [
+    576
+   ],
+   "byteOffset": 86843648,
+   "byteLength": 1152
+  },
+  {
+   "name": "enc.7.fc1.weight",
+   "dtype": "f16",
+   "shape": [
+    576,
+    2304
+   ],
+   "byteOffset": 86844928,
+   "byteLength": 2654208
+  },
+  {
+   "name": "enc.7.fc1.bias",
+   "dtype": "f16",
+   "shape": [
+    2304
+   ],
+   "byteOffset": 89499136,
+   "byteLength": 4608
+  },
+  {
+   "name": "enc.7.fc2.weight",
+   "dtype": "f16",
+   "shape": [
+    2304,
+    576
+   ],
+   "byteOffset": 89503744,
+   "byteLength": 2654208
+  },
+  {
+   "name": "enc.7.fc2.bias",
+   "dtype": "f16",
+   "shape": [
+    576
+   ],
+   "byteOffset": 92157952,
+   "byteLength": 1152
+  },
+  {
+   "name": "enc.7.ln2.weight",
+   "dtype": "f16",
+   "shape": [
+    576
+   ],
+   "byteOffset": 92159232,
+   "byteLength": 1152
+  },
+  {
+   "name": "enc.7.ln2.bias",
+   "dtype": "f16",
+   "shape": [
+    576
+   ],
+   "byteOffset": 92160512,
+   "byteLength": 1152
+  },
+  {
+   "name": "dec.0.self_qkv.weight",
+   "dtype": "f16",
+   "shape": [
+    576,
+    1728
+   ],
+   "byteOffset": 92161792,
+   "byteLength": 1990656
+  },
+  {
+   "name": "dec.0.self_qkv.bias",
+   "dtype": "f16",
+   "shape": [
+    1728
+   ],
+   "byteOffset": 94152448,
+   "byteLength": 3456
+  },
+  {
+   "name": "dec.0.self_out.weight",
+   "dtype": "f16",
+   "shape": [
+    576,
+    576
+   ],
+   "byteOffset": 94156032,
+   "byteLength": 663552
+  },
+  {
+   "name": "dec.0.self_out.bias",
+   "dtype": "f16",
+   "shape": [
+    576
+   ],
+   "byteOffset": 94819584,
+   "byteLength": 1152
+  },
+  {
+   "name": "dec.0.ln1.weight",
+   "dtype": "f16",
+   "shape": [
+    576
+   ],
+   "byteOffset": 94820864,
+   "byteLength": 1152
+  },
+  {
+   "name": "dec.0.ln1.bias",
+   "dtype": "f16",
+   "shape": [
+    576
+   ],
+   "byteOffset": 94822144,
+   "byteLength": 1152
+  },
+  {
+   "name": "dec.0.cross_q.weight",
+   "dtype": "f16",
+   "shape": [
+    576,
+    576
+   ],
+   "byteOffset": 94823424,
+   "byteLength": 663552
+  },
+  {
+   "name": "dec.0.cross_q.bias",
+   "dtype": "f16",
+   "shape": [
+    576
+   ],
+   "byteOffset": 95486976,
+   "byteLength": 1152
+  },
+  {
+   "name": "dec.0.cross_kv.weight",
+   "dtype": "f16",
+   "shape": [
+    576,
+    1152
+   ],
+   "byteOffset": 95488256,
+   "byteLength": 1327104
+  },
+  {
+   "name": "dec.0.cross_kv.bias",
+   "dtype": "f16",
+   "shape": [
+    1152
+   ],
+   "byteOffset": 96815360,
+   "byteLength": 2304
+  },
+  {
+   "name": "dec.0.cross_out.weight",
+   "dtype": "f16",
+   "shape": [
+    576,
+    576
+   ],
+   "byteOffset": 96817664,
+   "byteLength": 663552
+  },
+  {
+   "name": "dec.0.cross_out.bias",
+   "dtype": "f16",
+   "shape": [
+    576
+   ],
+   "byteOffset": 97481216,
+   "byteLength": 1152
+  },
+  {
+   "name": "dec.0.ln2.weight",
+   "dtype": "f16",
+   "shape": [
+    576
+   ],
+   "byteOffset": 97482496,
+   "byteLength": 1152
+  },
+  {
+   "name": "dec.0.ln2.bias",
+   "dtype": "f16",
+   "shape": [
+    576
+   ],
+   "byteOffset": 97483776,
+   "byteLength": 1152
+  },
+  {
+   "name": "dec.0.fc1.weight",
+   "dtype": "f16",
+   "shape": [
+    576,
+    2304
+   ],
+   "byteOffset": 97485056,
+   "byteLength": 2654208
+  },
+  {
+   "name": "dec.0.fc1.bias",
+   "dtype": "f16",
+   "shape": [
+    2304
+   ],
+   "byteOffset": 100139264,
+   "byteLength": 4608
+  },
+  {
+   "name": "dec.0.fc2.weight",
+   "dtype": "f16",
+   "shape": [
+    2304,
+    576
+   ],
+   "byteOffset": 100143872,
+   "byteLength": 2654208
+  },
+  {
+   "name": "dec.0.fc2.bias",
+   "dtype": "f16",
+   "shape": [
+    576
+   ],
+   "byteOffset": 102798080,
+   "byteLength": 1152
+  },
+  {
+   "name": "dec.0.ln3.weight",
+   "dtype": "f16",
+   "shape": [
+    576
+   ],
+   "byteOffset": 102799360,
+   "byteLength": 1152
+  },
+  {
+   "name": "dec.0.ln3.bias",
+   "dtype": "f16",
+   "shape": [
+    576
+   ],
+   "byteOffset": 102800640,
+   "byteLength": 1152
+  },
+  {
+   "name": "dec.1.self_qkv.weight",
+   "dtype": "f16",
+   "shape": [
+    576,
+    1728
+   ],
+   "byteOffset": 102801920,
+   "byteLength": 1990656
+  },
+  {
+   "name": "dec.1.self_qkv.bias",
+   "dtype": "f16",
+   "shape": [
+    1728
+   ],
+   "byteOffset": 104792576,
+   "byteLength": 3456
+  },
+  {
+   "name": "dec.1.self_out.weight",
+   "dtype": "f16",
+   "shape": [
+    576,
+    576
+   ],
+   "byteOffset": 104796160,
+   "byteLength": 663552
+  },
+  {
+   "name": "dec.1.self_out.bias",
+   "dtype": "f16",
+   "shape": [
+    576
+   ],
+   "byteOffset": 105459712,
+   "byteLength": 1152
+  },
+  {
+   "name": "dec.1.ln1.weight",
+   "dtype": "f16",
+   "shape": [
+    576
+   ],
+   "byteOffset": 105460992,
+   "byteLength": 1152
+  },
+  {
+   "name": "dec.1.ln1.bias",
+   "dtype": "f16",
+   "shape": [
+    576
+   ],
+   "byteOffset": 105462272,
+   "byteLength": 1152
+  },
+  {
+   "name": "dec.1.cross_q.weight",
+   "dtype": "f16",
+   "shape": [
+    576,
+    576
+   ],
+   "byteOffset": 105463552,
+   "byteLength": 663552
+  },
+  {
+   "name": "dec.1.cross_q.bias",
+   "dtype": "f16",
+   "shape": [
+    576
+   ],
+   "byteOffset": 106127104,
+   "byteLength": 1152
+  },
+  {
+   "name": "dec.1.cross_kv.weight",
+   "dtype": "f16",
+   "shape": [
+    576,
+    1152
+   ],
+   "byteOffset": 106128384,
+   "byteLength": 1327104
+  },
+  {
+   "name": "dec.1.cross_kv.bias",
+   "dtype": "f16",
+   "shape": [
+    1152
+   ],
+   "byteOffset": 107455488,
+   "byteLength": 2304
+  },
+  {
+   "name": "dec.1.cross_out.weight",
+   "dtype": "f16",
+   "shape": [
+    576,
+    576
+   ],
+   "byteOffset": 107457792,
+   "byteLength": 663552
+  },
+  {
+   "name": "dec.1.cross_out.bias",
+   "dtype": "f16",
+   "shape": [
+    576
+   ],
+   "byteOffset": 108121344,
+   "byteLength": 1152
+  },
+  {
+   "name": "dec.1.ln2.weight",
+   "dtype": "f16",
+   "shape": [
+    576
+   ],
+   "byteOffset": 108122624,
+   "byteLength": 1152
+  },
+  {
+   "name": "dec.1.ln2.bias",
+   "dtype": "f16",
+   "shape": [
+    576
+   ],
+   "byteOffset": 108123904,
+   "byteLength": 1152
+  },
+  {
+   "name": "dec.1.fc1.weight",
+   "dtype": "f16",
+   "shape": [
+    576,
+    2304
+   ],
+   "byteOffset": 108125184,
+   "byteLength": 2654208
+  },
+  {
+   "name": "dec.1.fc1.bias",
+   "dtype": "f16",
+   "shape": [
+    2304
+   ],
+   "byteOffset": 110779392,
+   "byteLength": 4608
+  },
+  {
+   "name": "dec.1.fc2.weight",
+   "dtype": "f16",
+   "shape": [
+    2304,
+    576
+   ],
+   "byteOffset": 110784000,
+   "byteLength": 2654208
+  },
+  {
+   "name": "dec.1.fc2.bias",
+   "dtype": "f16",
+   "shape": [
+    576
+   ],
+   "byteOffset": 113438208,
+   "byteLength": 1152
+  },
+  {
+   "name": "dec.1.ln3.weight",
+   "dtype": "f16",
+   "shape": [
+    576
+   ],
+   "byteOffset": 113439488,
+   "byteLength": 1152
+  },
+  {
+   "name": "dec.1.ln3.bias",
+   "dtype": "f16",
+   "shape": [
+    576
+   ],
+   "byteOffset": 113440768,
+   "byteLength": 1152
+  }
+ ],
+ "bins": [
+  {
+   "file": "weights.debf40dd.p0.bin",
+   "byteLength": 20000000,
+   "sha256": "caa47ef53cf2547d497c23ccdbe6c0d22cd2f5fd93ca100dedc41120c275f337"
+  },
+  {
+   "file": "weights.debf40dd.p1.bin",
+   "byteLength": 20000000,
+   "sha256": "6c6f93854a987c0fea7417463dc64fa77aaf2c63ae66a9b759e1d1d211e31003"
+  },
+  {
+   "file": "weights.debf40dd.p2.bin",
+   "byteLength": 20000000,
+   "sha256": "8ec5b5bc82d142f01162e936af48c41e297d949a2acc18f4ddfc5d36eb614e00"
+  },
+  {
+   "file": "weights.debf40dd.p3.bin",
+   "byteLength": 20000000,
+   "sha256": "3de6604ea531e39c61b41572f1b1c08181cfc06376cc75c93fa21105362d0f0e"
+  },
+  {
+   "file": "weights.debf40dd.p4.bin",
+   "byteLength": 20000000,
+   "sha256": "4e1ced3ee883b3066a1be382b4c77932b8057b19ee2848cdc4089aab45c45f4c"
+  },
+  {
+   "file": "weights.debf40dd.p5.bin",
+   "byteLength": 13441920,
+   "sha256": "2538269caff610d44cf5cef0ef176ef5bd8f6d035593ee888b7b8de408e17d12"
+  }
+ ]
+}

@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Mặc Hi — dịch truyện tiếng Trung sang tiếng Việt ngay trong trình duyệt bằng WebGPU. Văn bản không rời khỏi thiết bị của bạn." />
+    <link rel="canonical" href="https://moxhi.vietphrase.app/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://moxhi.vietphrase.app/" />
+    <meta property="og:site_name" content="Mặc Hi" />
+    <meta property="og:locale" content="vi_VN" />
+    <meta property="og:title" content="Mặc Hi 墨曦 — dịch truyện Trung–Việt trong trình duyệt" />
+    <meta property="og:description" content="Máy dịch chạy trên GPU của bạn. Văn bản không rời khỏi thiết bị và có thể dùng offline sau lần tải đầu." />
+    <meta property="og:image" content="https://moxhi.vietphrase.app/og.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Mặc Hi 墨曦 — dịch truyện Trung–Việt trong trình duyệt" />
+    <meta name="twitter:description" content="Dịch truyện bằng WebGPU ngay trên thiết bị; văn bản không rời khỏi máy." />
+    <meta name="twitter:image" content="https://moxhi.vietphrase.app/og.jpg" />
+    <title>Mặc Hi 墨曦 — dịch truyện Trung–Việt trong trình duyệt</title>
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <meta name="theme-color" content="#b3372f" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23b3372f'/%3E%3Ctext x='32' y='30' font-size='26' text-anchor='middle' fill='%23f4eee3' font-family='serif'%3E墨%3C/text%3E%3Ctext x='32' y='56' font-size='26' text-anchor='middle' fill='%23f4eee3' font-family='serif'%3E曦%3C/text%3E%3C/svg%3E" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://moxhi.vietphrase.app/#website",
+            "url": "https://moxhi.vietphrase.app/",
+            "name": "Mặc Hi",
+            "alternateName": "墨曦",
+            "inLanguage": "vi"
+          },
+          {
+            "@type": "WebApplication",
+            "@id": "https://moxhi.vietphrase.app/#app",
+            "url": "https://moxhi.vietphrase.app/",
+            "name": "Mặc Hi",
+            "alternateName": "墨曦",
+            "description": "Ứng dụng dịch truyện tiếng Trung sang tiếng Việt bằng WebGPU ngay trong trình duyệt; văn bản nguồn và bản dịch không rời khỏi thiết bị.",
+            "applicationCategory": "UtilitiesApplication",
+            "operatingSystem": "Windows, macOS, Android, iOS, iPadOS",
+            "browserRequirements": "WebGPU; Chrome hoặc Edge 113+, Safari 26+",
+            "isAccessibleForFree": true,
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "VND"
+            },
+            "featureList": [
+              "Dịch văn bản và file truyện Trung–Việt ngay trên thiết bị",
+              "Nhận diện UTF-8, GB18030/GBK và Big5",
+              "Quét nhân vật, địa danh và tổ chức",
+              "Từ điển tên riêng cho tên Hán-Việt, tiếng Anh và tiếng Nhật",
+              "Bộ nhớ dịch riêng theo từng mô hình",
+              "Hoạt động offline sau lần tải mô hình đầu tiên"
+            ],
+            "image": "https://moxhi.vietphrase.app/og.jpg",
+            "softwareHelp": "https://moxhi.vietphrase.app/about",
+            "inLanguage": "vi",
+            "isPartOf": {
+              "@id": "https://moxhi.vietphrase.app/#website"
+            }
+          }
+        ]
+      }
+    </script>
+    <script type="module" crossorigin src="/assets/main-rbayeg-D.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/modulepreload-polyfill-B5Qt9EMX.js">
+    <link rel="modulepreload" crossorigin href="/assets/tm_store-DFNGPBGg.js">
+    <link rel="modulepreload" crossorigin href="/assets/device-mdTX25TZ.js">
+    <link rel="modulepreload" crossorigin href="/assets/constants-CSVWRdrh.js">
+    <link rel="modulepreload" crossorigin href="/assets/shapes-CFV5_uGI.js">
+    <link rel="modulepreload" crossorigin href="/assets/f16-wKKZr58e.js">
+    <link rel="modulepreload" crossorigin href="/assets/weights-Co7eGWJH.js">
+    <link rel="modulepreload" crossorigin href="/assets/tokenizer-Duj9RLAT.js">
+    <link rel="modulepreload" crossorigin href="/assets/pipelines-CGkcYAmi.js">
+    <link rel="modulepreload" crossorigin href="/assets/encoder-B1_D4-h-.js">
+    <link rel="modulepreload" crossorigin href="/assets/decoder-BNvVLKnj.js">
+    <link rel="modulepreload" crossorigin href="/assets/generate-jUtMzJoV.js">
+    <link rel="modulepreload" crossorigin href="/assets/autotune-MYAQqWda.js">
+    <link rel="modulepreload" crossorigin href="/assets/shortlist-C151mR5c.js">
+    <link rel="modulepreload" crossorigin href="/assets/t2s-tefq7XcG.js">
+    <link rel="modulepreload" crossorigin href="/assets/models-CvHl_Lx7.js">
+    <link rel="modulepreload" crossorigin href="/assets/safe_storage-BYkOahew.js">
+    <link rel="modulepreload" crossorigin href="/assets/engine-CHD2bVyS.js">
+    <link rel="modulepreload" crossorigin href="/assets/glossary-gcAtyPAu.js">
+    <link rel="modulepreload" crossorigin href="/assets/preload-helper-BXl3LOEh.js">
+    <link rel="modulepreload" crossorigin href="/assets/pseudonym-DeqB8BRK.js">
+    <link rel="stylesheet" crossorigin href="/assets/main-BfS_mgCl.css">
+  </head>
+  <body>
+    <div id="app">
+      <!-- Static fallback: renderApp() replaces this the instant main.js runs.
+           Still visible after ~600ms (see .boot-fallback) ⇒ the bundle never
+           ran — JS off, or a browser too old to parse it. -->
+      <div class="boot-fallback">
+        <h1>Mặc Hi 墨曦</h1>
+        <p>Trang dịch chạy hoàn toàn trong trình duyệt bằng WebGPU, cần
+          <b>Chrome / Edge 113+</b> (Windows, macOS, Android) hoặc
+          <b>Safari 26+</b> (iPhone, iPad, macOS), và JavaScript được bật.</p>
+        <p>Nếu dòng chữ này không biến mất, trình duyệt của bạn chưa chạy được
+          bộ dịch — hãy cập nhật trình duyệt rồi mở lại.</p>
+      </div>
+    </div>
+  <!-- Cloudflare Pages Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "bbbf22d396224a7787bb7ecb36b80e07"}'></script><!-- Cloudflare Pages Analytics --></body>
+</html>
